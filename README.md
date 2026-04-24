@@ -7,3 +7,5 @@ This course is offered in the Department of [Electrical Engineering](https://www
 at the National Taiwan Normal University (NTNU) in Taipei, Taiwan.
 
 Students can also participate via the Global Virtual Classroom program of NTNU.
+
+You can view the homepage at [https://ciolh007.github.io/homepage-small-language-models](https://ciolh007.github.io/homepage-small-language-models)
