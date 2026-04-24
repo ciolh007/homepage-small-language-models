@@ -1,0 +1,211 @@
+---
+import Header from './NTNUHeader.astro';
+import background from '../assets/Copilot_20260424_144616.png';
+import HonestyDeclaration from './HonestyDeclaration.astro';
+---
+<Header/>
+<div id="container">
+	<img id="background" src={background.src} alt="" fetchpriority="high" />
+	<main>
+		<section id="introduction">
+			<h1>Assignment: Card Detector</h1>
+
+			<p>
+				Welcome to the Card Detector assignment! In this task, you will develop a card detection system using computer vision techniques. 
+				The goal is to identify and locate playing cards in images or video streams using an Android or iOS phone. 
+			</p>
+			<p>
+				The assignment will use a deep learning based approach, training a convolutional neural network (CNN) to identify cards rank and suit
+				as well as their location and angle.
+			</p>
+		</section>
+		<section id="training_data">
+			<h2>Training Data</h2>
+			<p>
+				To train your card detection model, you will need a dataset of labeled card images such as the ones shown below.
+				<table>
+					<thead>
+					</thead>
+					<tbody>
+						<tr>
+							<td><img src="/assets/card1.png" alt="Card 1" width="30%" /></td>
+							<td><img src="/assets/card2.png" alt="Card 2" width="30%" /></td>
+							<td><img src="/assets/card3.png" alt="Card 3" width="30%" /></td>
+						</tr>
+					</tbody>	
+				</table> 
+				You can create your own dataset by taking photos of playing cards in various orientations and lighting conditions, 
+				or you can use an existing dataset such as the "Playing Cards Dataset" available on Kaggle.
+			</p>
+			<p>
+				Make sure to label your images with the correct rank and suit of the cards, as well as their location and angle in the image. 
+				This will be crucial for training your model effectively.
+			</p>
+		</section>
+
+		<section id="honesty">
+			<HonestyDeclaration />
+		</section>
+	</main>
+</div>
+
+<style>
+	#background {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		filter: brightness(25%);
+	}
+
+	#container {
+		font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
+		height: 100%;
+	}
+
+	main {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	h1 {
+		padding: 10px;
+		font-size: 48px;
+		margin-top: 0.25em;
+	}
+
+	h2 {
+		padding: 10px;
+		font-size: 36px;
+		margin: 0 0 1em;
+		font-weight: normal;
+	}
+
+	#links {
+		display: flex;
+		gap: 16px;
+	}
+
+	#links a {
+		display: flex;
+		align-items: center;
+		padding: 10px 12px;
+		color: #111827;
+		text-decoration: none;
+		transition: color 0.2s;
+	}
+
+	#links a:hover {
+		color: rgb(78, 80, 86);
+	}
+
+	#links a svg {
+		height: 1em;
+		margin-left: 8px;
+	}
+
+	#links a.button {
+		color: white;
+		background: linear-gradient(83.21deg, #3245ff 0%, #bc52ee 100%);
+		box-shadow:
+			inset 0 0 0 1px rgba(255, 255, 255, 0.12),
+			inset 0 -2px 0 rgba(0, 0, 0, 0.24);
+		border-radius: 10px;
+	}
+
+	#links a.button:hover {
+		color: rgb(230, 230, 230);
+		box-shadow: none;
+	}
+
+	pre {
+		font-family:
+			ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono',
+			monospace;
+		font-weight: normal;
+		background: linear-gradient(14deg, #d83333 0%, #f041ff 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-clip: text;
+		margin: 0;
+	}
+
+	p {
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: -0.006em;
+		margin: 0;
+	}
+
+	code {
+		display: inline-block;
+		background:
+			linear-gradient(66.77deg, #f3cddd 0%, #f5cee7 100%) padding-box,
+			linear-gradient(155deg, #d83333 0%, #f041ff 18%, #f5cee7 45%) border-box;
+		border-radius: 8px;
+		border: 1px solid transparent;
+		padding: 6px 8px;
+	}
+
+	.box {
+		padding: 16px;
+		background: rgba(255, 255, 255, 1);
+		border-radius: 16px;
+		border: 1px solid white;
+	}
+
+	#news {
+		position: absolute;
+		bottom: 16px;
+		right: 16px;
+		max-width: 300px;
+		text-decoration: none;
+		transition: background 0.2s;
+		backdrop-filter: blur(50px);
+	}
+
+	#news:hover {
+		background: rgba(255, 255, 255, 0.55);
+	}
+
+	@media screen and (max-height: 368px) {
+		#news {
+			display: none;
+		}
+	}
+
+	@media screen and (max-width: 768px) {
+		#container {
+			display: flex;
+			flex-direction: column;
+		}
+
+		#hero {
+			display: block;
+			padding-top: 10%;
+		}
+
+		#links {
+			flex-wrap: wrap;
+		}
+
+		#links a.button {
+			padding: 14px 18px;
+		}
+
+		#news {
+			right: 16px;
+			left: 16px;
+			bottom: 2.5rem;
+			max-width: 100%;
+		}
+
+		h1 {
+			line-height: 1.5;
+		}
+	}
+</style>

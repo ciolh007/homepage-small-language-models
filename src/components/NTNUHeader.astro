@@ -1,0 +1,15 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/NTNU logo.png';
+---
+<div id="header" style="position: fixed; top: 0; left: 0; width: 100%; padding: 10px; background-color: rgba(50, 50, 50, 0.7); z-index: 100;">    
+    <table>
+        <tr>
+            <td style="vertical-align: top;"><Image src={logo} alt="NTNU Logo" width="120" /></td>
+            <td style="vertical-align: top; text-align: right;padding-left: 20px;color: #E0F7FA; font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;">
+                Jacky Baltes <a href='mailto:jacky.baltes@ntnu.edu.tw' style="color:aquamarine">jacky.baltes@ntnu.edu.tw</a>
+            </td>
+        </tr>
+    </table>
+</div>
+
